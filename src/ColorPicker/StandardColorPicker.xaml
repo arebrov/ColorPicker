@@ -54,6 +54,7 @@
                                    ShowAlpha="{Binding ElementName=uc, Path=ShowAlpha}"/>
         </DockPanel>
         <local:ColorSliders Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="3"
+                            ShowFractionalPart="{Binding ElementName=uc, Path=ShowFractionalPart}"
                             ColorState="{Binding ElementName=uc, Path=ColorState, Mode=TwoWay}"
                             SmallChange="{Binding ElementName=uc, Path=SmallChange}"
                             ShowAlpha="{Binding ElementName=uc, Path=ShowAlpha}"/>

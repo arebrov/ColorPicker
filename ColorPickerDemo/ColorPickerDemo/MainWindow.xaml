@@ -60,11 +60,15 @@
         </Border>
 
         <Label Grid.Column="1">Color sliders, styled, alpha hidden</Label>
-        <colorpicker:ColorSliders Grid.Row="0" Grid.Column="1" 
+        <colorpicker:ColorSliders Grid.Row="0" Grid.Column="1" x:Name="color_sliders"
                                   Style="{StaticResource DefaultColorPickerStyle}"
                                   ColorState="{Binding ElementName=maindisplay, Path=ColorState, Mode=TwoWay, Delay=10}"
                                   ShowAlpha="False"/>
-
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Bottom">
+            <Label Margin="0,0,4,0">Show fractional part</Label>
+            <CheckBox IsChecked="{Binding ElementName=color_sliders, Path=ShowFractionalPart, Mode=TwoWay}" VerticalAlignment="Center"/>
+        </StackPanel>
+        
         <Label Grid.Row="1" Grid.Column="1">Color Display, CadetBlue hint color</Label>
         <colorpicker:ColorDisplay Grid.Row="1" Grid.Column="1" Margin="5,25,5,5" x:Name="maindisplay" 
                                          UseHintColor="True" HintColor="CadetBlue"/>

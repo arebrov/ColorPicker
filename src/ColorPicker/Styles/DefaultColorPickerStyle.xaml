@@ -23,5 +23,6 @@
                 </Style>
             </ResourceDictionary>
         </Style.Resources>
+        <Setter Property="UseLayoutRounding" Value="False"/>
     </Style>
 </ResourceDictionary>

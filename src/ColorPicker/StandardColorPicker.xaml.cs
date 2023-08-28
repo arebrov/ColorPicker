@@ -13,9 +13,13 @@ namespace ColorPicker
             DependencyProperty.Register(nameof(ShowAlpha), typeof(bool), typeof(StandardColorPicker),
                 new PropertyMetadata(true));
 
-        public static readonly DependencyProperty PickerTypeProperty
-            = DependencyProperty.Register(nameof(PickerType), typeof(PickerType), typeof(StandardColorPicker),
+        public static readonly DependencyProperty PickerTypeProperty = 
+            DependencyProperty.Register(nameof(PickerType), typeof(PickerType), typeof(StandardColorPicker),
                 new PropertyMetadata(PickerType.HSV));
+
+        public static readonly DependencyProperty ShowFractionalPartProperty = 
+            DependencyProperty.Register(nameof(ShowFractionalPart), typeof(bool), typeof(StandardColorPicker), 
+                new PropertyMetadata(true));
 
         public double SmallChange
         {
@@ -33,6 +37,12 @@ namespace ColorPicker
         {
             get => (PickerType)GetValue(PickerTypeProperty);
             set => SetValue(PickerTypeProperty, value);
+        }
+        
+        public bool ShowFractionalPart
+        {
+            get => (bool)GetValue(ShowFractionalPartProperty);
+            set => SetValue(ShowFractionalPartProperty, value);
         }
 
         public StandardColorPicker() : base()

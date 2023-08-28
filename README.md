@@ -76,6 +76,7 @@ turns the scroll wheel with the cursor over the sliders. Present on controls wit
 - `ShowAlpha` lets you hide the alpha channel on various controls. 
 Present on all controls containing either an alpha slider (apart from the `AlphaSlider` control itself) or a hex color textbox.
 - `PickerType`: HSV or HSL, present on `SquarePicker` or controls that contain `SquarePicker`.
+- `ShowFractionalPart` enables the display of the fractional part in the text fields of the sliders (enabled by default), present on `ColorSliders` or controls that contain `ColorSliders`.
 
 # Styling<a name="styling">
 
